@@ -29,7 +29,7 @@ function Veg() {
         drag: "free",
         gap: "5rem",
       }}>
-      {veg.map((recipe) => {
+      {veg?.map((recipe) => {
         return(
           <SplideSlide>
           <section key={recipe.id}>
