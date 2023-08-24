@@ -8,7 +8,7 @@ function Searched({input}) {
     const [searchedRecipes, setSearchedRecipes] = useState([]);
     let params =useParams();
     const getSearched =async (name) => {
-        const data =await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=5c00e9e84f30441db3204c762ca79e75&number=8&query=${input}`);
+        const data =await fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=5c00e9e84f30441db3204c762ca79e75?ingredients=${input}&number=2`);
         const recipes = await data.json();
         console.log("recipes", recipes);
         setSearchedRecipes(recipes.results);
@@ -20,7 +20,7 @@ function Searched({input}) {
   return (
     <Grid>
         {console.log("searchedrecipes", searchedRecipes)}
-        {searchedRecipes.map((item) => {
+        {searchedRecipes?.map((item) => {
            return (
             <Card key={item.id}>
                 <img src={item.image} alt="" />

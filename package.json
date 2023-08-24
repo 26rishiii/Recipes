@@ -2,7 +2,7 @@
   "name": "recipes",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "https://github.com/26rishiii/Recipes",
+  "homepage": "https://github.com/26rishiii/Recipes",
   "dependencies": {
     "@splidejs/react-splide": "^0.7.12",
     "@testing-library/jest-dom": "^5.17.0",
@@ -22,8 +22,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

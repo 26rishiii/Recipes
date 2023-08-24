@@ -12,7 +12,7 @@ function Popular() {
   },[]);
 
   const getPopular =  async () => {
-    const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=bd497b8c633449d8b2c750474b6e2d89&number=8`);
+    const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=5c00e9e84f30441db3204c762ca79e75&number=8`);
     const data = await api.json();
     console.log(data.recipes);
     setPopular(data.recipes);
@@ -28,7 +28,7 @@ function Popular() {
         drag: "free",
         gap: "5rem",
       }}>
-      {popular.map((recipe) => (
+     {popular?.map((recipe) => (
           <SplideSlide key = {recipe.id}>
           <section>
             <p>{recipe.title}</p>
